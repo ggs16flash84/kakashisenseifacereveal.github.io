@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Face Reveal</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+     <div class="container">
+         <h1>Face Reveal</h1> 
+         <div class="row">
+             <div class="col">
+                 <div class="feature-img">
+                     <img src="media/Click It.png" width="100%" alt="An Image With Written Click Me">
+                     <img src="media/play.png" class="play-btn"
+                     onclick="playVideo('media/face reveal.mp4')">
+                 </div>
+             </div>
+         </div> 
+     </div>
+
+     <div class="video-player" id="videoPlayer">
+         <video width="100%" controls autoplay id="myVideo">
+             <source src="media/face reveal.mp4" type="video/mp4">
+         </video>
+         <img src="media/close.png" class="close-btn" 
+         onclick="stopVideo()">
+     </div>
+
+     <script>
+         var videoPlayer = document.getElementById("videoPlayer");
+         var myVideo = document.getElementById("myVideo");
+
+         function stopVideo(){
+
+             videoPlayer.style.display = "none";
+                      }
+
+            function playVideo(file){
+                myVideo.src = file;
+                videoPlayer.style.display = "block";
+            }
+
+     </script>
+
+
+
+
+    </body>
+</html>
